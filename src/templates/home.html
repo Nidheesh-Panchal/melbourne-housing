@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>
+			Melbourne Housing
+		</title>
+	</head>
+
+	<body>
+		<h1>
+			House in Melbourne: Price Prediction
+		</h1>
+
+		<h3>Please select the corresponding values to get a price prediction of the house in Melbourne</h3>
+
+		<span>
+			<div>
+				<form action="{{url_for('home_predict')}}" method="post">
+					<p>Select type of house from the following:</p> 
+					<li>Type 1 - House, Cottage, Villa, Semi, Terrace</li>
+					<li>Type 2 - Unit, Duplex</li>
+					<li>Type 3 - Townhouse</li> <br>
+		
+					<label for="type">Type of house:</label><br>
+		
+					<select id="type" name="type" required>
+						<option value="h">Type 1</option>
+						<option value="u">Type 2</option>
+						<option value="t">Type 3</option>
+					</select><br> <br>
+		
+					<label for="suburb">Select the Suburb the house is located in:</label> <br>
+					<select id="suburb" name="suburb" required size="6">
+						{% for suburb in suburb_list %}
+							<option value="{{ suburb }}">{{ suburb }}</option>
+						{% endfor %}
+					</select><br><br>
+		
+					<label for="rooms">Enter number of rooms:</label> <br>
+					<input name="rooms" id="rooms" type="number" min="0" value="{{default['rooms']}}" required><br><br>
+		
+					<label for="bathroom">Enter number of bathrooms:</label> <br>
+					<input name="bathroom" id="bathroom" type="number" min="0" value="{{default['bathroom']}}" required><br><br>
+		
+					<label for="landsize">Enter the area of the land of the house (square feet):</label> <br>
+					<input name="landsize" id="landsize" type="number" min="0" value="{{default['landsize']}}" required><br><br>
+		
+					<label for="distance">What is the distance of the house from the CBD (Central Activities District) (in kms):</label> <br>
+					<input name="distance" id="distance" type="number" min="0" value="{{default['distance']}}" required><br><br>
+		
+					<button type="submit">Predict</button>
+		
+				</form>
+			</div>
+			
+			{% if price %}
+			<div>
+				<h3>Your predicted price of the house is: {{price | currencyFormat}}</h3>
+			</div>
+			{% endif %}
+		</span>
+		
+
+	</body>
+	
+</html>
