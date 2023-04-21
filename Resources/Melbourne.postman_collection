@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"data\": {\r\n\t\t\"type\": \"h\",\r\n\t\t\"suburb\": \"Williamstown\",\r\n\t\t\"rooms\": 2,\r\n\t\t\"distance\": 12,\r\n\t\t\"bathroom\": 2,\r\n\t\t\"landsize\": 1000\r\n\t}\r\n}",
+					"raw": "{\r\n\t\"data\": {\r\n\t\t\"type\": \"h\",\r\n\t\t\"suburb\": \"Williamstown\",\r\n\t\t\"rooms\": 2,\r\n\t\t\"distance\": 12,\r\n\t\t\"bathroom\": 2,\r\n\t\t\"landsize\": 1000,\r\n\t\t\"car\": 2\r\n\t}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
