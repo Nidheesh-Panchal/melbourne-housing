@@ -2,7 +2,7 @@
 
 Using the [Melbourne Housing dataset](https://www.kaggle.com/datasets/dansbecker/melbourne-housing-snapshot) from kaggle, generated a linear regression model to predict the house prices of Melbourne using the predictors: type of the house, suburb house is located in, distance of the house from CBD, number of bathrooms and rooms in the house, total landsize for the house.
 
-Detailed analysis located in the jupyter notebook in the src folder.
+Detailed analysis located in the "melbourne" jupyter notebook in the src folder.
 
 <!-- ### Tools Used:
 1. [Github](https://github.com)

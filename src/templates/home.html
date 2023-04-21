@@ -43,6 +43,9 @@
 		
 					<label for="landsize">Enter the area of the land of the house (metre square):</label> <br>
 					<input name="landsize" id="landsize" type="number" min="0" value="{{default['landsize']}}" required><br><br>
+
+					<label for="car">Enter the number of car space:</label> <br>
+					<input name="car" id="car" type="number" min="0" value="{{default['car']}}" required><br><br>
 		
 					<label for="distance">What is the distance of the house from the CBD (Central Activities District) (in kms):</label> <br>
 					<input name="distance" id="distance" type="number" min="0" value="{{default['distance']}}" required><br><br>
@@ -53,8 +56,9 @@
 			</div>
 			
 			{% if price %}
-			<div>
-				<h3>Your predicted price of the house is: {{price | currencyFormat}}</h3>
+			<div >
+				<h3>Your predicted price of the house is (Linear Regression): {{price["lm"] | currencyFormat}}</h3>
+				<h3>Your predicted price of the house is (Random Forest) (more accurate): {{price["rf"] | currencyFormat}}</h3>
 			</div>
 			{% endif %}
 		</span>
